@@ -1,0 +1,22 @@
+An extremely generalized algorithm of the lex.yy.c file would look like this :
+
+Decision table definition
+transition(state,input) definition
+state_of_machine = start_state
+
+while(!EOF)
+{
+	match :
+		ichar = get_next_character()
+		next_state = transition(state_of_machine,ichar)
+		state_of_machine=next_state
+	accept:
+		If state_of_machine ∈ Accepting_states
+		Execute corresponding action
+		state_of_machine = start_state
+	error:
+		if state_of_machine = ø
+		Report error
+		Reset input
+		state_of_machine = start_state
+}
