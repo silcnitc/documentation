@@ -1,0 +1,15 @@
+Compiling the YACC program: 
+
+	yacc file.y
+
+To compile the generated y.tab.c file:
+
+	gcc y.tab.c
+
+To run the generated parser:
+
+	./a.out
+
+To feed an input file to the generated parser:
+
+	./a.out < input_file
